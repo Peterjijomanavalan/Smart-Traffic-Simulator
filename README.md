@@ -59,7 +59,7 @@ It provides a live dashboard showing signal status, traffic flow, and analytics 
 
 ```bash
 # Clone this repository
-git clone https://github.com/arhanash/smart-traffic-simulator.git
+git clone (https://github.com/Peterjijomanavalan/Smart-Traffic-Simulator.git)
 
 # Open the project in IntelliJ IDEA or VS Code
 
