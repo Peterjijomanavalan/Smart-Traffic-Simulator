@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Traffic Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="app-header">
+    <div class="logo">
+        <span>🚦 Smart Traffic Simulator</span>
+        <small>Traffic Management & Analysis Platform</small>
+    </div>
+    <div class="controls">
+        <button id="startBtn" class="btn green">Start</button>
+        <button id="stopBtn" class="btn gray">Stop</button>
+    </div>
+</header>
+
+<main>
+    <!-- Simulation Controls -->
+    <section class="controls-panel">
+        <h2>Simulation Controls</h2>
+        <div class="control-group">
+            <button id="startSimulation" class="btn green">Start Simulation</button>
+            <button id="stopSimulation" class="btn red">Stop Simulation</button>
+            <div class="speed-buttons">
+                <button class="btn small" onclick="setSpeed(0.5)">0.5x</button>
+                <button class="btn small active" onclick="setSpeed(1)">1x</button>
+                <button class="btn small" onclick="setSpeed(2)">2x</button>
+                <button class="btn small" onclick="setSpeed(4)">4x</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intersection Overview -->
+    <section class="intersection">
+        <h2>Intersection Overview</h2>
+        <div class="roads">
+            <div id="roadA" class="road red">
+                <h3>North Road (A)</h3>
+                <div class="signal red"></div>
+                <p>Vehicles: <span id="vehA">12</span></p>
+                <p>Queue: <span id="queueA">8</span></p>
+                <div class="bar"><div id="barA" class="progress" style="width:72%"></div></div>
+            </div>
+
+            <div id="roadB" class="road green">
+                <h3>East Road (B)</h3>
+                <div class="signal green"></div>
+                <p>Vehicles: <span id="vehB">6</span></p>
+                <p>Queue: <span id="queueB">3</span></p>
+                <div class="bar"><div id="barB" class="progress" style="width:85%"></div></div>
+            </div>
+
+            <div id="roadC" class="road red">
+                <h3>South Road (C)</h3>
+                <div class="signal red"></div>
+                <p>Vehicles: <span id="vehC">15</span></p>
+                <p>Queue: <span id="queueC">12</span></p>
+                <div class="bar"><div id="barC" class="progress" style="width:68%"></div></div>
+            </div>
+
+            <div id="roadD" class="road red">
+                <h3>West Road (D)</h3>
+                <div class="signal red"></div>
+                <p>Vehicles: <span id="vehD">9</span></p>
+                <p>Queue: <span id="queueD">6</span></p>
+                <div class="bar"><div id="barD" class="progress" style="width:80%"></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Override -->
+    <section class="emergency">
+        <h2>Emergency Override</h2>
+        <div class="road-select">
+            <button onclick="selectRoad('A')">Road A</button>
+            <button onclick="selectRoad('B')">Road B</button>
+            <button onclick="selectRoad('C')">Road C</button>
+            <button onclick="selectRoad('D')">Road D</button>
+        </div>
+        <div class="vehicle-select">
+            <button onclick="selectVehicle('Ambulance')">🚑 Ambulance</button>
+            <button onclick="selectVehicle('Fire Truck')">🚒 Fire Truck</button>
+            <button onclick="selectVehicle('Police')">🚓 Police</button>
+        </div>
+        <button class="btn red large" onclick="activateEmergency()">Activate Emergency Override</button>
+    </section>
+</main>
+
+<footer>
+    <p>Analytics information — Data collected from real-time traffic simulation</p>
+</footer>
+
+<script src="dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+body {
+    font-family: "Inter", sans-serif;
+    background: #f7f9fb;
+    margin: 0;
+    color: #222;
+}
+
+.app-header {
+    background: white;
+    padding: 1em 2em;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+}
+
+.btn {
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn.green { background: #10b981; color: white; }
+.btn.red { background: #ef4444; color: white; }
+.btn.gray { background: #d1d5db; }
+.btn.small { padding: 4px 10px; margin: 2px; }
+.btn.large { margin-top: 10px; width: 100%; }
+
+.road {
+    background: white;
+    border-radius: 12px;
+    padding: 1em;
+    width: 180px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.roads {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.signal {
+    width: 30px;
+    height: 70px;
+    border-radius: 10px;
+    margin: 0.5em auto;
+    position: relative;
+    background: #111;
+}
+
+.signal::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: 25px;
+    left: 5px;
+    background: currentColor;
+}
+
+.signal.red::before { color: #ef4444; }
+.signal.green::before { color: #10b981; }
+
+.bar {
+    background: #e5e7eb;
+    height: 8px;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+.progress {
+    background: #10b981;
+    height: 8px;
+    border-radius: 4px;
+}
